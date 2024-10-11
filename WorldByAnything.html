@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldByCapital</title>
+    <link rel="stylesheet" href="css/WorldByAnything.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="username">
+            <h1 id="username">Username</h1>
+        </div>
+
+        <div class="settings">
+            <h1> Settings</h1>
+            <label for="independent" class="toggle"></label>
+            <button class="independent"> Independent</button>
+            <label for="landlocked" class="toggle"></label>
+            <button class="landlocked"> landlocked</button>
+            <label for="borders" class="toggle"></label>
+            <button class="borders"> Bordered Countries</button>
+            <div class="dropdownRegion"></div>
+        </div>
+
+        <div class="leaderboard">
+            <h1>Leaderboard</h1>
+            <div class="switch-field">
+                <input type="radio" id="radio-one" name="switch" value="yes" checked/>
+                <label for="radio-one">Country</label>
+                <input type="radio" id="radio-two" name="switch" value="maybe" />
+                <label for="radio-two">Flag</label>
+                <input type="radio" id="radio-three" name="switch" value="no" />
+                <label for="radio-three">Capital</label>
+            </div>
+            <h3>Points:</h3>
+            <div class="counter"> 0/100</div>
+        </div>
+
+    </div>
+    
+    <div class="content">
+        <div class="switch">
+            <div class="switch-field">
+                <input type="radio" id="radio-four" name="switch-two" value="Country" checked/>
+                <label class="radioLabel" for="radio-four">Country</label>
+                <input type="radio" id="radio-five" name="switch-two" value="Flag" />
+                <label class="radioLabel" for="radio-five">Flag</label>
+                <input type="radio" id="radio-six" name="switch-two" value="Capital" />
+                <label class="radioLabel" for="radio-six">Capital</label>
+            </div>
+        </div>
+
+        <h1 id="Headline"> World by Country</h1>
+
+        <div class="byCountry">
+            
+            
+            <div class="rcwrapper">
+                <p>Random Country:</p>
+                <p id="randomCountry"> </p>
+                <button class="StartQuiz" onclick="getRandomCountry()"> Start Quiz</button>
+            </div>
+              
+            <div class="capInputWrapper">
+                <input type="text" id="capitalGuess" placeholder="Type in Capital City">
+                <p> Capital</p>
+                <button onclick="checkIfCorrect()"> Check</button>
+                <p id="check"></p>
+            </div>
+           
+            <div class="flagInputWrapper">
+                <input type="checkbox" id="firstCheck" style="display: none;"/>
+                <input id="firstFlag" type="image" src="../media/placeholder_flag.png" alt="">
+                
+                <input type="checkbox" id="secondCheck" style="display: none;" />
+                <input id="secondFlag" type="image" src="../media/placeholder_flag.png" alt="">
+                
+                <input type="checkbox" id="thirdCheck" style="display: none;" />
+                <input id="thirdFlag" type="image" src="../media/placeholder_flag.png" alt="">
+
+                <input type="checkbox" id="fourthCheck" style="display: none;" />
+                <input id="fourthFlag" type="image" src="../media/placeholder_flag.png" alt="">
+
+                <p>Pick correct flag</p>
+                <button onclick="checkIfFlagCorrect()"> Check</button>
+                <p id="checkFlag"></p>
+            </div>
+           
+            <div class="borderInputWrapper" style="display: none;">
+                <input type="text">
+                <p> Bordered Countries</p>
+                <button > Check</button>
+            </div>   
+        </div>
+
+        <div class="byFlag" style="display: none"></div>
+
+        <div class="byCapital" style="display: none"></div>
+
+    </div>
+
+
+    <script src="js/cookieHandler.js"></script>
+    <script src="js/fetchData.js"></script>
+
+
+</body>
+</html>
