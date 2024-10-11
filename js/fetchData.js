@@ -12,7 +12,12 @@ function getRandomCountry(){
             setupFlags();
         })
     .catch(error => console.log('error', error)) 
-   
+    var correct = document.getElementById("check"); 
+    var correcter = document.getElementById("checkFlag");
+
+    correct.innerHTML = "";
+    correcter.innerHTML = "";
+
 }
 
 function getRandomNumber (maxLength){
